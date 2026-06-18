@@ -1,0 +1,84 @@
+MotorPH Payroll System
+AOOP Milestone 2 – External Testing Guide
+
+System Requirements
+Before running the application, make sure you have:
+
+Java JDK 25 or a compatible Java Runtime
+MySQL Server
+MySQL Workbench
+
+
+Setup Instructions
+
+
+1. Extract the AOOPMS2.zip file
+Do not remove the lib folder as it contains the required system libraries.
+
+2. Set up the Database
+Open MySQL Workbench.
+Open the file:
+
+aoop_payroll_db.sql
+
+Execute the entire script.
+
+Ensure that the database aoop_payroll_db is created successfully.
+
+3. Check Database Connection
+Ensure your MySQL database credentials match the credentials configured in the system.
+
+Database information:
+
+Database Name: aoop_payroll_db
+Host: localhost
+Port: 3306
+
+4. Run the Application
+
+Open:
+
+MotorPHEmployeeApp.jar
+
+or run the following command:
+
+java -jar MotorPHEmployeeApp.jar
+
+
+Login Credentials
+
+All user accounts use their Employee Number as their password.
+
+Role	Employee Number	Password
+Admin	10001	10001
+HR	10002	10002
+Finance	10003	10003
+Regular Employee	10004	10004
+
+
+Features to Test
+
+Please verify the following:
+Login
+Login using different roles
+Employee Features
+View employee details
+Clock in and clock out
+Submit leave requests
+Generate payslips
+View payroll history
+HR Features
+View employee records
+Manage leave requests
+Generate payroll reports
+Database Persistence
+Attendance records are saved to the database
+Leave requests are saved to the database
+Generated payslips are stored in the database
+Reports display stored database records
+
+
+Important Notes:
+Keep the lib folder in the same location as MotorPHEmployeeApp.jar.
+Make sure MySQL Server is running before opening the application.
+The system uses Hibernate ORM with MySQL database persistence and no longer relies on CSV files.
